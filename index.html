@@ -6,86 +6,86 @@
 <title>JoKi 百科 · 个人知识 Wiki</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;font-size:16.5px;line-height:1.8;color:#161616;background:#fff}
-a{color:#161616;text-decoration:none;border-bottom:1px solid #ddd}
+body{font-family:"Noto Serif SC","Source Han Serif SC","Songti SC","SimSun",serif;font-size:16.5px;line-height:1.8;color:#000000;background:#fff}
+a{color:#000000;text-decoration:none;border-bottom:1px solid #ddd}
 a:hover{background:#fde300;border-color:#fde300;text-decoration:none}
 a.red{color:#c92a2a;cursor:default;border-bottom:none}
 a.red:hover{background:none;text-decoration:none}
-#top{position:sticky;top:0;z-index:50;background:#161616;display:flex;align-items:center;gap:12px;padding:8px 16px}
-#top .logo{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:20px;font-weight:900;letter-spacing:1px;background:#fde300;color:#161616;padding:4px 12px;border-radius:4px;white-space:nowrap;border-bottom:none}
+#top{position:sticky;top:0;z-index:50;background:#262626;display:flex;align-items:center;gap:12px;padding:8px 16px}
+#top .logo{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:20px;font-weight:900;letter-spacing:1px;background:#fde300;color:#000000;padding:4px 12px;border-radius:2px;white-space:nowrap;border-bottom:none}
 #top .logo:hover{background:#fde300}
 #top .logo span{color:#ed12ed}
 #search{flex:1;max-width:520px;position:relative}
-#search input{width:100%;padding:7px 12px;border:1px solid #444;border-radius:4px;font-size:14.5px;background:#fff;color:#161616;outline:none;font-family:inherit}
+#search input{width:100%;padding:7px 12px;border:1px solid #555;border-radius:2px;font-size:14.5px;background:#fff;color:#000;outline:none;font-family:inherit}
 #search input:focus{border-color:#fde300;box-shadow:0 0 0 2px rgba(253,227,0,.35)}
-#search .drop{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 4px 4px;max-height:340px;overflow:auto;display:none;z-index:60;box-shadow:0 6px 18px rgba(0,0,0,.12)}
-#search .drop a{display:block;padding:7px 12px;color:#161616;font-size:14px;border-bottom:none}
+#search .drop{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid #e8e8e8;border-top:none;border-radius:0 0 6px 6px;max-height:340px;overflow:auto;display:none;z-index:60;box-shadow:rgba(0,0,0,0.3) 0px 2px 1px 0px}
+#search .drop a{display:block;padding:7px 12px;color:#000;font-size:14px;border-bottom:none}
 #search .drop a:hover{background:#fde300;text-decoration:none}
-#top .tbtn{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:6px 12px;border:1px solid #444;border-radius:4px;background:transparent;color:#f0f0f0;cursor:pointer;font-size:13.5px}
-#top .tbtn:hover{background:#fde300;border-color:#fde300;color:#161616}
+#top .tbtn{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:6px 12px;border:1px solid #555;border-radius:2px;background:transparent;color:#f0f0f0;cursor:pointer;font-size:13.5px}
+#top .tbtn:hover{background:#fde300;border-color:#fde300;color:#000}
 #layout{display:flex;max-width:1440px;margin:0 auto}
-#side{width:224px;flex-shrink:0;padding:18px 12px;border-right:1px solid #eee;font-size:13.5px;position:sticky;top:53px;height:calc(100vh - 53px);overflow:auto;background:#fafaf8}
-#side h4{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:11px;color:#8a8a8a;letter-spacing:2px;text-transform:uppercase;margin:16px 0 6px;border-bottom:1px solid #eee;padding-bottom:4px}
-#side a.nav{display:block;padding:4px 8px;color:#161616;border-bottom:none}
+#side{width:224px;flex-shrink:0;padding:20px 12px;border-right:1px solid #eee;font-size:13.5px;position:sticky;top:53px;height:calc(100vh - 53px);overflow:auto;background:#fafaf8}
+#side h4{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:12px;color:#6d6d6d;letter-spacing:2px;text-transform:uppercase;margin:20px 0 8px;border-bottom:1px solid #eee;padding-bottom:4px}
+#side a.nav{display:block;padding:4px 8px;color:#000;border-bottom:none}
 #side a.nav:hover{background:#fde300;text-decoration:none}
 #side a.nav.active{background:#fde300;font-weight:700}
 #side .ch{display:block;padding:3px 8px;color:#545454;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-bottom:none}
-#side .ch:hover{color:#161616;background:#fde300}
-#main{flex:1;min-width:0;padding:24px 32px 64px}
+#side .ch:hover{color:#000;background:#fde300}
+#main{flex:1;min-width:0;padding:28px 40px 72px}
 #main .wrap{max-width:880px;margin:0 auto}
-h1.pt{font-family:"Noto Sans SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:30px;font-weight:800;line-height:1.25;letter-spacing:.5px;margin-bottom:14px;padding-bottom:10px;border-bottom:4px solid #fde300;display:inline-block}
-.lead{font-size:15px;color:#404040;margin:8px 0 16px}
-.infobox{float:right;width:250px;margin:4px 0 18px 20px;background:#fafaf8;border:1px solid #e8e8e8;font-size:13px;border-radius:6px}
-.infobox h3{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:14px;text-align:center;background:#161616;color:#fff;padding:6px 4px;border-radius:6px 6px 0 0}
+h1.pt{font-family:"Noto Sans SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:32px;font-weight:800;line-height:1.25;letter-spacing:.5px;margin-bottom:16px;padding-bottom:10px;border-bottom:4px solid #fde300;display:inline-block}
+.lead{font-size:15px;color:#404040;margin:8px 0 20px}
+.infobox{float:right;width:250px;margin:4px 0 20px 20px;background:#fafaf8;border:1px solid #e8e8e8;font-size:13px;border-radius:6px}
+.infobox h3{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:14px;text-align:center;background:#262626;color:#fff;padding:6px 4px;border-radius:6px 6px 0 0}
 .infobox table{width:100%;border-collapse:collapse}
 .infobox td{padding:5px 10px;vertical-align:top;border-bottom:1px solid #f0f0f0}
-.infobox td.k{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:11px;color:#8a8a8a;width:70px;white-space:nowrap;letter-spacing:1px}
-.toc{background:#fff;border:1px solid #e8e8e8;display:inline-block;padding:8px 16px 10px;margin:8px 0 18px;border-radius:6px;font-size:14px}
+.infobox td.k{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:11px;color:#6d6d6d;width:70px;white-space:nowrap;letter-spacing:1px}
+.toc{background:#fff;border:1px solid #e8e8e8;display:inline-block;padding:8px 16px 10px;margin:8px 0 20px;border-radius:6px;font-size:14px}
 .toc b{display:block;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:13px;margin-bottom:4px}
-.toc a{display:block;padding:2px 0;color:#161616;border-bottom:none}
+.toc a{display:block;padding:2px 0;color:#000;border-bottom:none}
 .toc a:hover{background:#fde300;text-decoration:none}
-h2{font-family:"Noto Sans SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:19px;font-weight:700;margin:30px 0 10px;padding-left:10px;border-left:4px solid #fde300}
+h2{font-family:"Noto Sans SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:21px;font-weight:700;margin:40px 0 12px;padding-left:10px;border-left:4px solid #fde300}
 .sec{font-size:16.5px;margin-bottom:8px}
 .sec.rig{border-left:3px solid #fde300;padding-left:14px;margin-left:2px}
 .sec.mem{border-left:3px solid #ed12ed;padding-left:14px;margin-left:2px;background:#fdfaff}
-.sec.plain{border-left:3px solid #161616;padding-left:14px;margin-left:2px;background:#fafaf8}
+.sec.plain{border-left:3px solid #fac514;padding-left:14px;margin-left:2px;background:#fafaf8}
 ul.pts{margin:8px 0 8px 24px}
 ul.pts li{margin:4px 0}
-.hook{background:#fff;border:1px solid #f0d9a8;border-left:4px solid #ed12ed;border-radius:6px;padding:12px 14px;margin:18px 0;font-size:15px;color:#3a3a3a}
+.hook{background:#fff;border:1px solid #f0d9a8;border-left:4px solid #ed12ed;border-radius:6px;padding:12px 14px;margin:20px 0;font-size:15px;color:#3a3a3a}
 .related{display:flex;flex-wrap:wrap;gap:8px}
-.related .wl{display:inline-block;padding:4px 12px;background:#fff;border:1px solid #161616;border-radius:20px;font-size:14px;color:#161616}
+.related .wl{display:inline-block;padding:4px 12px;background:#fff;border:1px solid #000;border-radius:28px;font-size:14px;color:#000}
 .related .wl:hover{background:#fde300;text-decoration:none}
 .related .wl.red{background:#fff;border-color:#c92a2a;color:#c92a2a}
-.src{font-family:Consolas,"JetBrains Mono","Courier New",monospace;color:#8a8a8a;font-size:12px;margin-top:22px;border-top:1px solid #eee;padding-top:10px;letter-spacing:.5px}
+.src{font-family:Consolas,"JetBrains Mono","Courier New",monospace;color:#6d6d6d;font-size:12px;margin-top:24px;border-top:1px solid #eee;padding-top:10px;letter-spacing:.5px}
 .backlinks{font-size:14px;color:#404040;margin:8px 0 4px}
-.backlinks .wl{display:inline-block;padding:3px 12px;background:#fafaf8;border:1px solid #e8e8e8;border-radius:20px;font-size:13.5px;color:#161616;margin:2px 6px 2px 0}
+.backlinks .wl{display:inline-block;padding:3px 12px;background:#fafaf8;border:1px solid #e8e8e8;border-radius:28px;font-size:13.5px;color:#000;margin:2px 6px 2px 0}
 .backlinks .wl:hover{background:#fde300;text-decoration:none}
-.backlinks.none{color:#8a8a8a;font-size:12.5px;margin:4px 0 8px}
+.backlinks.none{color:#6d6d6d;font-size:12.5px;margin:4px 0 8px}
 table.wt{border-collapse:collapse;margin:12px 0;width:100%;font-size:14.5px}
 table.wt th,table.wt td{border:1px solid #e8e8e8;padding:6px 10px}
-table.wt th{background:#161616;color:#fff;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-weight:600}
+table.wt th{background:#262626;color:#fff;font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-weight:600}
 table.wt tr:nth-child(even) td{background:#fafaf8}
-.checkin{background:#fff;border:2px solid #161616;border-radius:8px;padding:16px 18px;margin:26px 0 10px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.checkin button{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:9px 22px;font-size:15px;font-weight:700;border:2px solid #161616;background:#fde300;color:#161616;border-radius:6px;cursor:pointer}
-.checkin button:hover{background:#161616;color:#fde300}
+.checkin{background:#fff;border:2px solid #000;border-radius:6px;padding:16px 18px;margin:28px 0 10px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.checkin button{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;padding:9px 22px;font-size:15px;font-weight:700;border:2px solid #000;background:#fde300;color:#000;border-radius:6px;cursor:pointer}
+.checkin button:hover{background:#000;color:#fde300}
 .checkin button:active{transform:scale(.98)}
 .checkin .st{font-size:14px;color:#404040}
 .checkin .st b{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:22px;color:#ed12ed}
-.cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:14px 0 24px}
-.card{background:#fff;border:2px solid #161616;border-radius:8px;padding:16px 18px}
-.card .n{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:28px;font-weight:700;color:#161616}
+.cardgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin:16px 0 32px}
+.card{background:#fff;border:2px solid #000;border-radius:6px;padding:16px 18px}
+.card .n{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:30px;font-weight:700;color:#000}
 .card .l{font-size:13px;color:#6d6d6d;margin-top:4px}
-.chblock{background:#fff;border:1px solid #e8e8e8;border-radius:8px;padding:12px 16px;margin-bottom:12px}
-.chblock .ct{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;font-weight:700;color:#161616}
-.chblock .cc{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:12px;color:#8a8a8a;margin:2px 0 8px}
+.chblock{background:#fff;border:1px solid #e8e8e8;border-radius:6px;padding:12px 16px;margin-bottom:12px}
+.chblock .ct{font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;font-size:16px;font-weight:700;color:#000}
+.chblock .cc{font-family:Consolas,"JetBrains Mono","Courier New",monospace;font-size:12px;color:#6d6d6d;margin:2px 0 8px}
 .chblock .tags{display:flex;flex-wrap:wrap;gap:6px}
-.chblock .tags a{font-size:13.5px;color:#161616;background:#fff;border:1px solid #ddd;padding:1px 10px;border-radius:14px}
+.chblock .tags a{font-size:13.5px;color:#000;background:#fff;border:1px solid #ddd;padding:1px 10px;border-radius:28px}
 .chblock .tags a:hover{background:#fde300;text-decoration:none;border-color:#fde300}
-.entrylist a{display:block;padding:6px 10px;border-bottom:1px solid #f2f2f2;color:#161616}
+.entrylist a{display:block;padding:6px 10px;border-bottom:1px solid #f2f2f2;color:#000}
 .entrylist a:hover{background:#fde300;text-decoration:none}
-.entrylist .ec{color:#8a8a8a;font-size:12.5px}
-.empty{color:#8a8a8a;padding:24px;text-align:center}
-footer{font-family:Consolas,"JetBrains Mono","Courier New",monospace;color:#8a8a8a;font-size:12px;text-align:center;padding:22px;border-top:1px solid #eee;margin-top:34px;letter-spacing:.5px}
+.entrylist .ec{color:#6d6d6d;font-size:12.5px}
+.empty{color:#6d6d6d;padding:24px;text-align:center}
+footer{font-family:Consolas,"JetBrains Mono","Courier New",monospace;color:#6d6d6d;font-size:12px;text-align:center;padding:24px;border-top:1px solid #eee;margin-top:48px;letter-spacing:.5px}
 @media (max-width:760px){
  #layout{display:block}
  #side{display:none}
@@ -93,7 +93,7 @@ footer{font-family:Consolas,"JetBrains Mono","Courier New",monospace;color:#8a8a
  #search{max-width:100%;order:3;flex-basis:100%}
  .infobox{float:none;width:100%;margin:8px 0}
  #main{padding:16px 14px}
- h1.pt{font-size:24px}
+ h1.pt{font-size:25px}
  body{font-size:16px}
 }
 </style>
